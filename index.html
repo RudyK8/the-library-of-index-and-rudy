@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b18">
+  <meta name="description" content="The Library of Index and Rudy — bibliothèque scientifique numérique et immersive.">
+  <title>The Library of Index and Rudy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="The Library of Index and Rudy, accueil">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/library-emblem.png" alt=""></span>
+      <span class="brand-name">THE LIBRARY <b>OF INDEX & RUDY</b></span>
+    </a>
+
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+      <a class="nav-link active" href="#home">Accueil</a>
+      <div class="explorer-wrap">
+        <button class="nav-link explorer-trigger" id="explorerTrigger" aria-expanded="false" aria-controls="explorerMenu">Explorer <span class="chevron">⌄</span></button>
+        <div class="explorer-menu" id="explorerMenu" hidden>
+          <div class="menu-intro"><span class="eyebrow">NAVIGATION</span><strong>Explore l'univers</strong><p>Choisis un espace pour commencer ton parcours.</p></div>
+          <div class="menu-group"><span>EXPLORER</span><button data-open="constellations">Carte des constellations</button><button data-open="library">Bibliothèque</button></div>
+          <div class="menu-group"><span>APPRENDRE</span><button data-open="labs">Laboratoires</button><button data-open="news">Actualités scientifiques</button></div>
+          <div class="menu-group"><span>ÉCHANGER</span><button data-open="community">Communauté</button></div>
+          <div class="menu-group"><span>ASSISTANCE</span><button data-open="ai">Intelligence artificielle</button></div>
+          <div class="menu-group"><span>PERSONNEL</span><button data-open="personal">Espace personnel</button></div>
+        </div>
+      </div>
+      <button class="nav-link nav-button" data-open="community">Communauté</button>
+      <button class="nav-link nav-button" data-open="about">À propos</button>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="searchInfo" aria-label="Recherche bientôt disponible" title="Recherche bientôt disponible"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+      <button class="icon-button unavailable" aria-label="Notifications : bientôt disponibles" title="Notifications bientôt disponibles"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg></button>
+      <button class="avatar-button" data-open="personal" aria-label="Espace personnel">U</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="status-line"><span class="status-dot"></span> UN UNIVERS DE CONNAISSANCES À EXPLORER</div>
+        <h1 id="heroTitle">Le savoir n'a<br>pas de <em>frontières.</em></h1>
+        <p class="hero-subtitle">Explore les sciences, découvre les liens entre les idées et laisse ta curiosité ouvrir de nouvelles portes.</p>
+        <div class="search-shell" role="button" tabindex="0" aria-label="Recherche bientôt disponible" id="searchShell">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          <span>Que souhaites-tu découvrir aujourd'hui ?</span>
+          <kbd>⌕</kbd>
+        </div>
+        <p class="search-note">Recherche intelligente <span>·</span> bientôt disponible</p>
+      </div>
+
+      <div class="galaxy-stage">
+        <div class="galaxy-label"><span class="label-line"></span><span>01 / LE CŒUR DE L'UNIVERS</span></div>
+        <button class="galaxy-button" data-open="constellations" aria-label="Découvrir les constellations">
+          <span class="galaxy-halo"></span>
+          <span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="orbit orbit-c"></span>
+          <span class="galaxy-core">
+            <span class="core-glow"></span>
+            <span class="core-star star-one"></span><span class="core-star star-two"></span><span class="core-star star-three"></span>
+            <span class="core-ring"></span>
+            <span class="core-word">INDEX</span>
+            <span class="core-subword">& RUDY</span>
+          </span>
+          <span class="orbit-node node-one"></span><span class="orbit-node node-two"></span><span class="orbit-node node-three"></span>
+        </button>
+        <div class="galaxy-caption"><span>LA GALAXIE</span><span class="caption-divider"></span><span>INFINITÉ DE SAVOIRS</span></div>
+        <button class="primary-cta" data-open="constellations">Découvrir les constellations <span>↗</span></button>
+      </div>
+
+      <aside class="discovery-card" aria-label="Découverte du jour">
+        <div class="card-topline"><span class="eyebrow">À LA UNE AUJOURD'HUI</span><span class="live-mark">✦</span></div>
+        <div class="discovery-art" aria-hidden="true">
+          <div class="art-planet"></div><div class="art-orbit art-orbit-one"></div><div class="art-orbit art-orbit-two"></div><span class="art-spark spark-a">✦</span><span class="art-spark spark-b">·</span>
+          <span class="art-index">DÉCOUVERTE 001</span>
+        </div>
+        <div class="discovery-meta"><span>ASTRONOMIE</span><span>•</span><span>EXPLORATION</span></div>
+        <h2>Les mondes qui<br>flottent dans l'invisible</h2>
+        <p>Une exploration des exoplanètes et des méthodes qui permettent de détecter des mondes lointains.</p>
+        <button class="text-link" data-open="discovery">Explorer la découverte <span>→</span></button>
+      </aside>
+    </section>
+
+    <section class="spaces-section" aria-labelledby="spacesTitle">
+      <div class="section-heading">
+        <div><span class="eyebrow">LES PORTES DE L'UNIVERS</span><h2 id="spacesTitle">Choisis ton <em>prochain voyage.</em></h2></div>
+        <span class="section-count">06 ESPACES À EXPLORER</span>
+      </div>
+      <div class="spaces-grid">
+        <button class="space-card library-card" data-open="library"><span class="space-number">02</span><span class="space-art books-art" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span><span class="space-content"><span class="space-kicker">ARCHIVES & SAVOIRS</span><strong>Bibliothèque</strong><small>Les connaissances, réunies et reliées.</small></span><span class="space-arrow">↗</span></button>
+        <button class="space-card labs-card" data-open="labs"><span class="space-number">03</span><span class="space-art lab-art" aria-hidden="true"><span class="flask-neck"></span><span class="flask-body"></span><span class="flask-liquid"></span><i>✦</i></span><span class="space-content"><span class="space-kicker">EXPÉRIMENTER</span><strong>Laboratoires</strong><small>Comprendre en explorant et en testant.</small></span><span class="space-arrow">↗</span></button>
+        <button class="space-card news-card" data-open="news"><span class="space-number">04</span><span class="space-art news-art" aria-hidden="true"><span class="paper"><b>NEWS</b><i></i><i></i><i></i></span></span><span class="space-content"><span class="space-kicker">LE MONDE EN MOUVEMENT</span><strong>Actualités</strong><small>Les découvertes et avancées scientifiques.</small></span><span class="space-arrow">↗</span></button>
+        <button class="space-card community-card" data-open="community"><span class="space-number">05</span><span class="space-art people-art" aria-hidden="true"><i></i><i></i><i></i><b></b></span><span class="space-content"><span class="space-kicker">PARTAGER & ÉCHANGER</span><strong>Communauté</strong><small>Les esprits curieux se rencontrent.</small></span><span class="space-arrow">↗</span></button>
+        <button class="space-card ai-card" data-open="ai"><span class="space-number">06</span><span class="space-art robot-art" aria-hidden="true"><span class="robot-head"><i></i><b></b></span><span class="robot-antenna"></span></span><span class="space-content"><span class="space-kicker">ASSISTANT INTELLIGENT</span><strong>Intelligence artificielle</strong><small>Un compagnon pour questionner le savoir.</small></span><span class="space-arrow">↗</span></button>
+        <button class="space-card personal-card" data-open="personal"><span class="space-number">07</span><span class="space-art person-art" aria-hidden="true"><i></i><b></b><span></span></span><span class="space-content"><span class="space-kicker">TON ESPACE</span><strong>Espace personnel</strong><small>Retrouve tes explorations et favoris.</small></span><span class="space-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="closing-strip"><span class="closing-star">✦</span><p>Chaque découverte est le début d'une nouvelle question.</p><div class="closing-actions"><button id="guideReplay">Revoir la présentation <span>↗</span></button><button data-open="about">En savoir plus <span>→</span></button></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">THE LIBRARY OF INDEX AND RUDY</a><span>Prototype de conception · V6</span><span>Explorer · Comprendre · Relier</span></footer>
+
+  <div class="overlay" id="overlay" hidden aria-modal="true" role="dialog" aria-labelledby="overlayTitle">
+    <div class="overlay-backdrop" data-close-overlay></div>
+    <section class="overlay-panel" role="document">
+      <header class="overlay-header"><a class="brand" href="#home" data-close-overlay><span class="brand-mark"><img src="assets/library-emblem.png" alt=""></span><span class="brand-name">THE LIBRARY <b>OF INDEX & RUDY</b></span></a><span class="overlay-section-label">THE LIBRARY OF INDEX AND RUDY</span><button class="close-button" id="closeOverlay" aria-label="Fermer et revenir au Hall">✕ <span>Retour au Hall</span></button></header>
+      <div class="overlay-body" id="overlayBody"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
